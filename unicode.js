@@ -70,10 +70,13 @@ Take the string "Code".
 Use charCodeAt to extract the Unicode code points of the first and third characters.
 Assign the results to variables named firstCodePoint and thirdCodePoint.
 
+
 Task 2: Create a Word from Code Points
 Use the Unicode code points 72, 101, 108, and 108 (corresponding to the characters H, e, l, and l).
 Use String.fromCharCode to create the word "Hell".
 Assign the result to a variable named wordFromCodePoints.
+
+
 
 Task 3: Swap First and Last Characters
 Take the string "Launch".
@@ -83,18 +86,23 @@ Assign the result to a variable named swappedString.
 
 */
 
-//Starter Code
+//Starter Code Answers below:
+// Practice Problem #1
 // Task 1
 let inputString1 = "Code";
-let firstCodePoint; // Your code here
-let thirdCodePoint; // Your code here
+let firstCodePoint = inputString1.charCodeAt(0); // 'C' = 67
+let thirdCodePoint = inputString1.charCodeAt(2); // 'd' = 100
 
+//Practice Problem #2
 // Task 2
-let wordFromCodePoints; // Your code here
+let wordFromCodePoints = String.fromCharCode(72, 101, 108, 108); // "Hell"
 
+// practice Problem #3
 // Task 3
 let inputString2 = "Launch";
-let swappedString; // Your code here
+let firstCharCode = inputString2.charCodeAt(0); // 'L' = 76
+let lastCharCode = inputString2.charCodeAt(inputString2.length - 1); // 'h' = 104
+let swappedString = String.fromCharCode(lastCharCode) + inputString2.slice(1, -1) + String.fromCharCode(firstCharCode); // "hauncL"
 
 // Log all results
 console.log({
